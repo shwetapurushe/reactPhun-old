@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <script src="build/react.min.js"></script>
+    <script src="build/JSXTransformer.js"></script>
     <meta charset="UTF-8">
     <title>myReact</title>
 </head>
 <body>
 
-    <script src="build/react.min.js"></script>
 
-    <script>
-        React.render(React.createElement('div', null, 'Hello Shweta!!'), document.body );
+    <script type="text/jsx">
+        var HelloShweta = React.createClass({
+            render : function(){
+                return (
+                     <div>Hello Shweta</div>
+                )
+
+            }
+        });
+        React.render(<HelloShweta/>, document.body);
     </script>
 </body>
 </html>
