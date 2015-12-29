@@ -8,17 +8,24 @@
 </head>
 <body>
 
+    <div id="react-container"></div>
 
     <script type="text/jsx">
         var HelloShweta = React.createClass({
             render : function(){
                 return (
-                     <div>Hello Shweta</div>
+                     <div>This is one React component</div>
                 )
 
             }
         });
-        React.render(<HelloShweta/>, document.body);
+
+        React.render(<div>
+                        <HelloShweta/>
+                        <HelloShweta/>
+                        <HelloShweta/>
+                    </div>,
+                document.getElementById('react-container'));
     </script>
 </body>
 </html>
