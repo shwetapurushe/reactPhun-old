@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="../build/react.min.js"></script>
+    <script src="../build/JSXTransformer.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="content"></div>
+
+    <script type="text/jsx">
+        var OneComponent = React.createClass({
+            getInitialState : function(){
+                this.state = {blah:true};
+                console.log("**********Calling the getInitialState function");
+                console.log("State", this.state);
+                console.log("props", this.props);
+                return this.state;
+            },
+
+            getDefaultProps : function(){
+                console.log("#########Calling the getDefaultProps function");
+                console.log("State", this.state);
+                console.log("props", this.props);
+                return this.state;
+            },
+
+            render : function(){
+              console.log("@@@@@@@@@@@@calling the render function");
+                console.log("State", this.state);
+                console.log("props", this.props);
+              return (
+                      <div>
+                          Hello {this.props}
+                      </div>
+              );
+            },
+
+        });
+            React.render(<OneComponent />, document.getElementById('content'));
+    </script>
+
+</body>
+</html>

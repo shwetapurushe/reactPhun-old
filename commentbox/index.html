@@ -49,10 +49,12 @@
         });
 
         var Comment = React.createClass({
+            //props and state are accessible only inside the component
             render : function(){
+                console.log(this);
                 return(
                         <div className = "comment">
-                            <h2 class = 'commentAuthor'>{this.props.author}</h2>
+                            <h2 class = 'commentAuthor'>{this.props.author}</h2>\
                              {this.props.children}
                         </div>
                 );
