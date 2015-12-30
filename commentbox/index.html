@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="../build/react.min.js"></script>
+    <script src="../build/JSXTransformer.js"></script>
+    <meta charset="UTF-8">
+    <title>Comment Box</title>
+</head>
+<body>
+
+    <div id="content"></div>
+
+    <script type="text/jsx">
+        var CommentBox = React.createClass({
+            render : function(){
+                return (
+                        <div className = "commentBox">
+                            <h1>Comments</h1>
+                                <CommentList />
+                        </div>
+                );
+            }
+        });
+
+
+
+
+        var CommentList = React.createClass({
+            //we are passing the properties from the parent here
+            // parent : commentList child :Comment
+            render :function(){
+                return(
+                        <div className = "commentList">
+                            <Comment author = "Shweta Purushe">This is a comment</Comment>
+                            <Comment author = "John Doe">This is *another* comment</Comment>
+                        </div>
+                );
+            }
+        });
+
+        var CommentForm = React.createClass({
+            render : function(){
+                return (
+                        <div className = "commentForm">
+                            Hello I am a CommentForm
+                        </div>
+                );
+            }
+        });
+
+        var Comment = React.createClass({
+            render : function(){
+                return(
+                        <div className = "comment">
+                            <h2 class = 'commentAuthor'>{this.props.author}</h2>
+                             {this.props.children}
+                        </div>
+                );
+            }
+        });
+
+        React.render(<CommentBox />, document.getElementById('content'));
+    </script>
+
+</body>
+</html>
