@@ -36,7 +36,10 @@
         }
     });
 
-    React.render(<MyButton />, document.getElementById('container'));
+    React.render(<div>
+                    <MyButton />
+                    <MyButton />
+                </div>, document.getElementById('container'));
 </script>
 </body>
 </html>
