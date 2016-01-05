@@ -50,6 +50,7 @@
 
         var Comment = React.createClass({
             //props and state are accessible only inside the component
+            //this refers to the instance of React.Component
             render : function(){
                 console.log(this);
                 return(
@@ -60,7 +61,7 @@
                 );
             }
         });
-
+        // the component directly passed in React.render() is the root -level component
         React.render(<CommentBox />, document.getElementById('content'));
     </script>
 
