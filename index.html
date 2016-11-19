@@ -10,24 +10,6 @@
 
     <div id="react-container"></div>
 
-    <script type="text/jsx">
-       var HelloShweta = React.createClass({
-           render: function(){
-               return (
-                       <div>
-                          <h1>{this.props.text}</h1>
-                           <p>{this.props.children}</p>
-                       </div>
-               );
-           }
-       });
-
-        React.render(<div>
-                        <HelloShweta text = "Hello Shweta!">This is in English</HelloShweta>
-                        <HelloShweta text = "Namaste Shweta!">This is in Hindi</HelloShweta>
-                        <HelloShweta text = "Guten Tag Shweta!">This is in German</HelloShweta>
-                    </div>,
-                document.getElementById('react-container'));
-    </script>
+    <script src="src/radviz.jsx"></script>
 </body>
 </html>
