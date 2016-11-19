@@ -25,8 +25,7 @@ module.exports ={
 	},
 	externals : {
 		"react" : "React",
-		"react-dom": "ReactDOM",
-		"Weave" : "Weave"
+		"react-dom": "ReactDOM"
 	}
 
 };/**
